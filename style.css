@@ -1,0 +1,33 @@
+:root {
+  --main-bg-color: #111;
+  --main-fg-color: whitesmoke;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-fg-color);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 20px;
+}
+
+a {
+  color: var(--main-fg-color);
+}
+
+#language {
+  margin-bottom: 20px;
+  align-self: flex-end;
+}
+
+#en {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80vw;
+  height: 80vh;
+}
