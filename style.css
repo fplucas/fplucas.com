@@ -16,18 +16,25 @@ a {
 
 #language {
   margin-bottom: 20px;
-  align-self: flex-end;
+  text-align: right;
 }
 
-#en {
-  display: none;
+#en, #pt {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: visibility .5s ease-out 2s, opacity .5s;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: center;
   margin: 0 auto;
+  padding-top: 50px;
   width: 80vw;
-  height: 80vh;
-}
+  }
