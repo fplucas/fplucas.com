@@ -1,40 +1,130 @@
 :root {
-  --main-bg-color: #111;
-  --main-fg-color: whitesmoke;
+    --sky-blue: #88C4D9;
+    --ocre: #D4B06A;
+    --bright-green: #6BAF6B;
+    --lightbrown: #432F20;
+    --darkbrown: #2D1F16;
+    --red: #D94E4E;
+    --pale-mushroom: #EAE3D9;
+    --cerulean-mist: #A3D2CA;
+    --coral: #C97C5D;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: var(--main-bg-color);
-  color: var(--main-fg-color);
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 20px;
+    font-family: 'Fira Code', sans-serif;
+    background: var(--pale-mushroom);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--lightbrown);
+    color: var(--pale-mushroom);
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: var(--pale-mushroom);
+    left: 2rem;
+}
+
+.header-content {
+    max-width: 600px;
+}
+
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+nav {
+    background: var(--darkbrown);
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: var(--pale-mushroom);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+footer {
+    background: var(--darkbrown);
+    color: #e1e2e7;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
 }
 
 a {
-  color: var(--main-fg-color);
+    color: var(--coral);
 }
 
-#language {
-  margin-bottom: 20px;
-  text-align: right;
+img {
+    display: block;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#en, #pt {
-  grid-row: 2;
-  grid-column: 1;
-}
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
 
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
-  transition: visibility .5s ease-out 2s, opacity .5s;
-}
+    .vertical-text {
+        margin: 0 0 1rem 0;
+    }
 
-.container {
-  display: grid;
-  justify-content: center;
-  margin: 0 auto;
-  padding-top: 50px;
-  width: 80vw;
-  }
+    #avatar {
+        width: 80%;
+    }
+}
